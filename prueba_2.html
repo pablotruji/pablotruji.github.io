@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: lightcoral;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .contenedor{
+            position: relative;
+            background-image: url(imagenes/Image-fondo-480.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .contenedor .contenedor-calavera{
+           position: relative;
+           background-image: url(imagenes/Imagen-calavera-medio.jpg);
+           background-position: center;
+           background-size: cover;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .contenedor-grid{
+            border: 2px solid #fff;        
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 300px 200px 1fr;
+            grid-template-areas: "logo1 logo1 logo2"
+                                 "sidebar1 contenido sidebar2"
+                                 "footer footer footer"
+                                
+        }
+
+        .objetos{
+            border: 1px solid rgb(23, 168, 144);
+            height: 100%;
+        }
+
+        .objetos-1{
+            grid-area: logo1;
+  
+        }
+
+        .objetos-2{
+            grid-area: logo2;
+        }
+
+        .objetos-3{
+            grid-area: sidebar1;
+        }
+
+        .objetos-4{
+            grid-area:sidebar2
+        }
+        .objetos-5{
+
+            grid-area: contenido;
+        }
+
+        .objetos-6{
+            display: flex;
+            grid-area: footer;
+            align-items: flex-end;
+        }
+
+        .footer{
+            display: flex;
+            width: 100%;
+            height: 150px;
+            border: 1px solid #545;
+            background: red;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+            <div class="contenedor-calavera">       
+            <div class="contenedor-grid">
+               
+
+                <div class="objetos objetos-1">1</div>
+                <div class="objetos objetos-2">2</div>
+                <div class="objetos objetos-3">3</div>
+                <div class="objetos objetos-4">4</div>
+                <div class="objetos objetos-5">5</div>
+                <div class="objetos objetos-6">
+
+                    <div class="footer">
+                        Hola
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>
